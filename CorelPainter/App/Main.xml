@@ -1,0 +1,9 @@
+<Element>
+
+  <Element
+    width="60"
+    height="200"
+    backgroundColor="glm::vec4(50, 50, 50, 255)">
+    </Element>
+
+</Element>
