@@ -1,0 +1,8 @@
+<FontIcon
+  width="18dp"
+  aspectRatio="1"
+  font="_s(CorelPainter/icons/icons.ttf)"
+  color="glm::vec4(40, 40, 40, 255)"
+  marginLeft="20dp"
+  marginRight="20dp">
+</FontIcon>

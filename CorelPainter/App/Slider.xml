@@ -1,0 +1,15 @@
+<Element
+    width="30"
+    height="150"
+    backgroundColor="glm::vec4(50, 50, 50, 255)">
+
+    <Element
+      width="100%"
+      aspectRatio="1"
+      borderRadius="0.5"
+      backgroundColor="glm::vec4(220, 220, 220, 255)"
+      borderSize="1dp"
+      borderColor="glm::vec4(0, 0, 0, 255)">
+    </Element>
+
+</Element>

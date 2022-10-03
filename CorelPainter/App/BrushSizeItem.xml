@@ -1,0 +1,8 @@
+<Element
+  width="50dp"
+  aspectRatio="1"
+  borderSize="1dp"
+  borderRadius="4"
+  borderColor="glm::vec4(50, 50, 50, 255)"
+  margin="5dp">
+</Element>

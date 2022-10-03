@@ -1,0 +1,117 @@
+#include "PopupBase.h"
+
+#include <e3/ViewFactory.h>
+#include "CorelPainterValues.h"
+
+PopupBase::PopupBase(e3::Element* pParent)
+	: e3::Element(pParent)
+{
+        this->SetWidth("280dp");
+        this->SetHeight("400dp");
+        this->SetBackgroundColor(glm::vec4(210, 210, 210, 255));
+        this->SetBorderRadius(10);
+        this->SetPositionType((e3::EPositionType)1);
+        this->SetLeft(0);
+        this->SetTop(0);
+        this->SetOrientation((e3::EOrientation)1);
+    e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(pElement1);
+        pElement1->SetWidth("60%");
+        pElement1->SetBackgroundImage("CorelPainter/images/brush.png");
+    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(pElement2);
+        pElement2->SetWidth("100%");
+                BrushSizeItem* pCustomView1 = new BrushSizeItem();
+        pElement2->AddElement(pCustomView1);
+                BrushSizeItem* pCustomView2 = new BrushSizeItem();
+        pElement2->AddElement(pCustomView2);
+                BrushSizeItem* pCustomView3 = new BrushSizeItem();
+        pElement2->AddElement(pCustomView3);
+                BrushSizeItem* pCustomView4 = new BrushSizeItem();
+        pElement2->AddElement(pCustomView4);
+    e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(pElement3);
+        pElement3->SetWidth("100%");
+                BrushSizeItem* pCustomView5 = new BrushSizeItem();
+        pElement3->AddElement(pCustomView5);
+                BrushSizeItem* pCustomView6 = new BrushSizeItem();
+        pElement3->AddElement(pCustomView6);
+                BrushSizeItem* pCustomView7 = new BrushSizeItem();
+        pElement3->AddElement(pCustomView7);
+                BrushSizeItem* pCustomView8 = new BrushSizeItem();
+        pElement3->AddElement(pCustomView8);
+    mBrushPanel = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mBrushPanel);
+                BrushSizeItem* pCustomView9 = new BrushSizeItem();
+        mBrushPanel->AddElement(pCustomView9);
+                BrushSizeItem* pCustomView10 = new BrushSizeItem();
+        mBrushPanel->AddElement(pCustomView10);
+                BrushSizeItem* pCustomView11 = new BrushSizeItem();
+        mBrushPanel->AddElement(pCustomView11);
+                BrushSizeItem* pCustomView12 = new BrushSizeItem();
+        mBrushPanel->AddElement(pCustomView12);
+    mMiscPanel = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    AddElement(mMiscPanel);
+        mMiscPanel->SetMarginTop("30dp");
+        mMiscPanel->SetPadding("5dp");
+        mMiscPanel->SetOrientation((e3::EOrientation)1);
+    e3::Element* pElement4 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    mMiscPanel->AddElement(pElement4);
+        pElement4->SetWidth("100%");
+        pElement4->SetAlignItemsHor((e3::EAlignment)3);
+        e3::Text* pText1 = e3::ViewFactory::CreateText();
+        pElement4->AddElement(pText1);
+        pText1->SetText("Size");
+        pText1->SetFontSize("14dp");
+        pText1->SetTextColor(glm::vec4(40, 40, 40, 255));
+    e3::Element* pElement5 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement4->AddElement(pElement5);
+        pElement5->SetPadding("4dp");
+        pElement5->SetBackgroundColor(glm::vec4(255));
+        e3::Text* pText2 = e3::ViewFactory::CreateText();
+        pElement5->AddElement(pText2);
+        pText2->SetText("45px");
+        pText2->SetFontSize("14dp");
+    e3::Element* pElement6 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    mMiscPanel->AddElement(pElement6);
+        pElement6->SetMarginTop("6dp");
+        pElement6->SetWidth("100%");
+    e3::Element* pElement7 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement6->AddElement(pElement7);
+        pElement7->SetWidth("100%");
+        pElement7->SetHeight("4dp");
+        pElement7->SetBorderRadius(0.5);
+        pElement7->SetBackgroundColor(glm::vec4(100, 100, 100, 255));
+    e3::Element* pElement8 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement6->AddElement(pElement8);
+        pElement8->SetHeight("16dp");
+        pElement8->SetAspectRatio(1.000000);
+        pElement8->SetPositionType((e3::EPositionType)1);
+        pElement8->SetBackgroundColor(glm::vec4(255));
+        pElement8->SetBorderRadius(0.5);
+    e3::Element* pElement9 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    mMiscPanel->AddElement(pElement9);
+        pElement9->SetWidth("100%");
+        pElement9->SetMarginTop("14dp");
+        pElement9->SetAlignItemsHor((e3::EAlignment)3);
+        e3::Text* pText3 = e3::ViewFactory::CreateText();
+        pElement9->AddElement(pText3);
+        pText3->SetText("Pressure Control");
+        pText3->SetFontSize("14dp");
+        pText3->SetTextColor(glm::vec4(40, 40, 40, 255));
+    e3::Element* pElement10 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement9->AddElement(pElement10);
+        pElement10->SetWidth("50dp");
+        pElement10->SetHeight("22dp");
+        pElement10->SetBorderRadius(0.5);
+        pElement10->SetBackgroundColor(glm::vec4(0, 0, 200, 255));
+        pElement10->SetPadding("2dp");
+        pElement10->SetAlignItemsHor((e3::EAlignment)1);
+    e3::Element* pElement11 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement10->AddElement(pElement11);
+        pElement11->SetHeight("100%");
+        pElement11->SetAspectRatio(1.000000);
+        pElement11->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
+        pElement11->SetBorderRadius(0.5);
+
+}
